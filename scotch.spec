@@ -10,7 +10,7 @@
 Name:          scotch
 Summary:       Graph, mesh and hypergraph partitioning library
 Version:       6.0.9
-Release:       1
+Release:       2
 
 License:       CeCILL-C
 URL:           https://gforge.inria.fr/projects/scotch/
@@ -29,6 +29,7 @@ BuildRequires: bison
 BuildRequires: zlib-devel
 BuildRequires: bzip2-devel
 BuildRequires: xz-devel
+BuildRequires: environment-modules
 
 %description
 Scotch is a software package for graph and mesh/hypergraph partitioning and
@@ -270,5 +271,8 @@ LD_LIBRARY_PATH=%{buildroot}%{_libdir} make -C src/check
 %doc doc/scotch_example.f
 
 %changelog
+* Tue Jan 14 2025 QiuWenjian <wenjian.oerv@isrc.iscas.ac.cn> - 6.0.9-2
+- Fix compile error
+
 * Wed Jun 15 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn> - 6.0.9-1
 - init package
